@@ -5,7 +5,11 @@ module Ducksboard
   @api_key = ENV['DUCKSBOARD_API_KEY']
 end
 
+require 'ducksboard/api'
+
+require 'ducksboard/dashboard'
 require 'ducksboard/widget'
+
 require 'ducksboard/box'
 require 'ducksboard/counter'
 require 'ducksboard/gauge'
