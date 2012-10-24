@@ -12,6 +12,10 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'httparty', '~> 0.8', '>= 0.8.1'
 
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'minitest', '~> 4.0', '>= 4.0.0'
+  s.add_development_dependency 'webmock', '~> 1.8.11'
+
   s.post_install_message = <<-DESC
   Quack! (in real-time)"
 
