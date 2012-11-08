@@ -1,7 +1,7 @@
 module Ducksboard
   class Dashboard
     include HTTParty
-    include Api
+    include API
     format :json
     type "app"
 

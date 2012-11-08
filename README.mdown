@@ -1,5 +1,7 @@
 ## Ducksboard API Ruby wrapper
 
+This gem is used to push data to [Ducksboard](http://ducksboard.com/).
+
 ### Configuration
 
 API Key can be set in the environment

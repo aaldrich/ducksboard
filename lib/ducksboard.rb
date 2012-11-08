@@ -6,15 +6,18 @@ module Ducksboard
 end
 
 require 'ducksboard/api'
+require 'ducksboard/response'
 
 require 'ducksboard/dashboard'
+require 'ducksboard/http_push'
+
 require 'ducksboard/widget'
 
-require 'ducksboard/box'
-require 'ducksboard/counter'
-require 'ducksboard/gauge'
-require 'ducksboard/graph'
-require 'ducksboard/image'
-require 'ducksboard/pin'
-require 'ducksboard/timeline'
-require 'ducksboard/leaderboard'
+# require 'ducksboard/box'
+# require 'ducksboard/counter'
+# require 'ducksboard/gauge'
+# require 'ducksboard/graph'
+# require 'ducksboard/image'
+# require 'ducksboard/pin'
+# require 'ducksboard/timeline'
+# require 'ducksboard/leaderboard'
