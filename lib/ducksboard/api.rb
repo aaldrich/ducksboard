@@ -6,7 +6,7 @@ module Ducksboard
 
     module ClassMethods
       def type(subdomain="app", namespace="/api")
-        self.base_uri "#{subdomain}.ducksboard.com#{namespace}"
+        self.base_uri "https://#{subdomain}.ducksboard.com#{namespace}"
       end
     end
 

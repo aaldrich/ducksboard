@@ -13,7 +13,7 @@ module Ducksboard
 
     # Send data to the endpoint.
     def push(data)
-      response = self.class.post(path, :body => data.to_json)
+      response = self.class.post(path, :body => data.to_json, :basic_auth => Ducksboard.auth)
       Response.new(response)
     end
 

@@ -11,7 +11,7 @@ module Ducksboard
     # 
     # Returns a list of dashboard instances.
     def self.all
-      response = self.get("/dashboards")
+      response = self.get("/dashboards", :basic_auth => Ducksboard.auth)
       response['data'].map {|attrs| new(attrs) }
     end
 
@@ -21,7 +21,7 @@ module Ducksboard
     #
     # Returns an instance of Dashboard.
     def self.find(slug)
-      response = self.get("/dashboards/#{slug}")
+      response = self.get("/dashboards/#{slug}", :basic_auth => Ducksboard.auth)
       new(response)
     end
 
