@@ -16,7 +16,7 @@ module Ducksboard
     end
 
     def initialize(label)
-      @label = label
+      @label = @id = label
     end
 
     # Push data to resource endpoint.

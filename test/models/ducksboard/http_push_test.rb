@@ -14,7 +14,7 @@ describe Ducksboard::HTTPPush do
   it "returns a response" do
     packet = { :value => 100 }
 
-    stub_request(:post, "http://push.ducksboard.com/values/#{@label}").
+    stub_request(:post, "https://:x@push.ducksboard.com/values/#{@label}").
     with(:body => packet.to_json).to_return(:status => 200, :body => @response.to_json)
 
     response = push.push(packet)
@@ -24,7 +24,7 @@ describe Ducksboard::HTTPPush do
   it "can push a single packet" do
     packet = { :value => 100 }
 
-    stub_request(:post, "http://push.ducksboard.com/values/#{@label}").
+    stub_request(:post, "https://:x@push.ducksboard.com/values/#{@label}").
     with(:body => packet.to_json).to_return(:status => 200, :body => @response.to_json)
 
     response = push.push(packet)
@@ -34,7 +34,7 @@ describe Ducksboard::HTTPPush do
   it "can push multiple packets" do
     packet = [{ :value => 100 }, { :value => 101 }]
 
-    stub_request(:post, "http://push.ducksboard.com/values/#{@label}").
+    stub_request(:post, "https://:x@push.ducksboard.com/values/#{@label}").
     with(:body => packet.to_json).to_return(:status => 200, :body => @response.to_json)
     response = push.push(packet)
     response.success?.must_equal true

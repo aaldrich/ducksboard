@@ -23,7 +23,7 @@ describe Ducksboard::Dashboard do
     end
 
     it "returns a list of dashboards" do
-      stub_request(:get, "http://app.ducksboard.com/api/dashboards").to_return(:body => @response)
+      stub_request(:get, "https://:x@app.ducksboard.com/api/dashboards").to_return(:body => @response)
       dashboards = Ducksboard::Dashboard.all
       dashboards.size.must_equal 1
       dashboards.first.slug.must_equal @slug
@@ -44,7 +44,7 @@ describe Ducksboard::Dashboard do
     end
 
     it "returns a dashboard object" do
-      stub_request(:get, "http://app.ducksboard.com/api/dashboards/#{@slug}").to_return(:body => @response)
+      stub_request(:get, "https://:x@app.ducksboard.com/api/dashboards/#{@slug}").to_return(:body => @response)
       dashboard = Ducksboard::Dashboard.find(@slug)
       dashboard.name.must_equal "my dashboard", dashboard.inspect
     end

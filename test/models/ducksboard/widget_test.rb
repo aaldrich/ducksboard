@@ -8,7 +8,7 @@ describe Ducksboard::Widget do
       :value => 10
     }
 
-    stub_request(:post, "http://push.ducksboard.com/values/label").
+    stub_request(:post, "https://:x@push.ducksboard.com/values/label").
       with(:body => packet.to_json).
       to_return(:status => 200)
 
