@@ -1,8 +1,22 @@
-## Ducksboard API Ruby wrapper
+# Ducksboard API Ruby wrapper
 
 This gem is used to push data to [Ducksboard](http://ducksboard.com/).
 
-### Configuration
+## Pushing Data
+
+To push data, simply grab the id from the widget preferences -> urls on
+Ducksboard.
+
+```ruby
+# for example, with a widget url of https://push.ducksboard.com/v/1234
+widget = Ducksboard::Widget.find(1234)
+widget << {:value => 10}
+```
+
+Read the [documentation](http://dev.ducksboard.com/apidoc/push-api/#resource-endpoints)
+on endpoints.
+
+## Configuration
 
 API Key can be set in the environment
 
