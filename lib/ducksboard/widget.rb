@@ -5,18 +5,22 @@ module Ducksboard
     format :json
     type "app", "/api"
 
-    attr_accessor :label
+    attr_accessor :label, :id
 
     # Get all of the current widgets.
     def self.all
       response = get("/widgets", :basic_auth => Ducksboard.auth)
       response.parsed_response["data"].map {|data|
-        new(data["widget"]["id"])
+        new(data["widget"])
       }
     end
 
-    def initialize(label)
-      @label = @id = label
+    def self.find(id)
+      new({"id" => id})
+    end
+
+    def initialize(attributes={})
+      @label = @id = attributes["id"]
     end
 
     # Push data to resource endpoint.
