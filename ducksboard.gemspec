@@ -1,8 +1,14 @@
+# -*- encoding: utf-8 -*-
+$:.push File.expand_path("../lib", __FILE__)
+require "ducksboard/version"
+
 Gem::Specification.new do |s|
   s.name        = 'ducksboard'
-  s.version     = '0.1.3'
-  s.summary     = "API wrapper for ducksboard.com dashboard"
-  s.description = "Ruby API wrapper for ducksboard realtime dashboard using HTTParty"
+  s.version     = Ducksboard::VERSION
+  s.summary     = "API wrapper for pushing data to Ducksboard."
+  s.description = <<DESCRIPTION
+Ruby API wrapper for pushing data to Ducksboard widgets.
+DESCRIPTION
   s.authors     = ["Joseph Hsu"]
   s.email       = 'jhsu.x1@gmail.com'
   s.files       = `git ls-files`.split("\n")
