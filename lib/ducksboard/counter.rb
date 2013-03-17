@@ -4,8 +4,8 @@ module Ducksboard
       @data[:delta]
     end
 
-    def delta=(text=nil)
-      @data[:delta] = delta.to_s
+    def delta=(text)
+      @data[:value][:delta] = text
     end
   end
 end
