@@ -28,8 +28,8 @@ module Ducksboard
 
     def update(data=nil)
       @data = data if data
-      Rails.logger.info "data logger: #{@data}"
-      puts "data puts: #{@data}"
+      Rails.logger.info "data logger: #{@data.to_json}"
+      puts "data puts: #{@data.to_json}"
       self.class.post("#{PUSH_URI}/#{@id.to_s}",
         :basic_auth => auth,
         :body => @data.to_json)
