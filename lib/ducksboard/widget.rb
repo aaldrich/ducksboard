@@ -28,7 +28,9 @@ module Ducksboard
 
     def update(data=nil)
       @data = data if data
-      puts "Data Json: #{@data.to_json}"
+      File.open('log.txt','w') do |file|
+        file.write "Data Json: #{@data.to_json}"
+      end
       self.class.post("#{PUSH_URI}/#{@id.to_s}",
         :basic_auth => auth,
         :body => @data.to_json)
