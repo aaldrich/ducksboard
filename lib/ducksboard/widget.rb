@@ -28,6 +28,7 @@ module Ducksboard
 
     def update(data=nil)
       @data = data if data
+      puts @data.to_json
       self.class.post("#{PUSH_URI}/#{@id.to_s}",
         :basic_auth => auth,
         :body => @data.to_json)
